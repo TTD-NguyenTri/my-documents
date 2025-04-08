@@ -7,19 +7,19 @@
 
 ## [Naming & coding convention]
 
-**1. Format tên**
-
 *Nguồn tham khảo* 
 https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
+
+**1. Format tên**
 
 | Format | Mô tả  | Sử dụng  |
 |--|--|--|
 | `PascalCasing` | Viết hoa chữ cái đầu mỗi từ | ✔️ Dùng cho tất cả public member, static, const, property, type (Class, Struct, Interface, Enum) namespace và method |
-| `camelCasing` | Viết hoa chữ cái đầu mỗi từ, trừ từ đầu tiên | ✔️ Dùng cho parameter, variable. Lưu ý với member variable thêm dấu gạch chân (underscore) _ đằng trước tên |
+| `camelCasing` | Viết hoa chữ cái đầu mỗi từ, trừ từ đầu tiên | ✔️ Dùng cho parameter, variable. Lưu ý với member variable (private field của class) thêm dấu gạch chân (underscore) _ đằng trước tên |
 | `under_score` | Chữ cái đầu mỗi từ viết thường, các từ ngăn cách nhau bởi dấu gạch chân | ❌ Hạn chế hoặc không sử dụng loại format này |
 	
 
-**2. Sử dụng từ ngữ để đặt tên**
+**2. Lựa chọn từ ngữ để đặt tên**
 
 - Sử dụng từ tiếng anh đúng chính tả
 - Tên không quá dài, tối đa 4 từ. Nếu tên quá dài cần xem xét các phương án tạo class phụ hoặc viết tắt tên
@@ -49,10 +49,10 @@ https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guide
 | Generic Type Parameters | Sử dụng chữ 'T', nếu có từ hai parameter trở lên thì cần thêm từ mô tả cho mỗi parameter và bắt buộc có tiền tố 'T' đằng trước tên | `TResult`, `TTarget`, `TSource` |
 | Attribute | Thêm hậu tố 'Attribute' | `ReadOnlyAttribute` |
 | Delegate | Dùng ở event thêm hậu tố 'EventHandler, các trường hợp còn lại thêm hậu tố 'Callback' |  |
-| Enum | ❌ Không thêm hậu tố hay tiền tố Enum vào tên |  |
-| Exception | Thêm hậu tố 'Exception' |  |
-| IDictionary | Thêm hậu tố 'Dict' |  |
-| IEnumerable, ICollection, IList | Thêm hậu tố 'Collection' hoặc tên là danh từ số nhiều |  |
+| Enum | ❌ Không thêm hậu tố hay tiền tố Enum vào tên | `❌FamilyEnum` `✔️Family` |
+| Exception | Thêm hậu tố 'Exception' | `MissingTypeException` |
+| IDictionary | Thêm hậu tố 'Dict' | `ViewNameDict` |
+| IEnumerable, ICollection, IList | Thêm hậu tố 'Collection', 'List' hoặc tên là danh từ số nhiều | `People` `Documents` `ViewNameCollection` |
 | Method | Sử dụng động từ hoặc cụm động từ | `Copy()` `TryGetValue()` `CompareTo()` |
 		
 **6. Property**
